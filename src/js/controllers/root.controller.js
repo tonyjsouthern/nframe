@@ -1,0 +1,5 @@
+function RootController () {
+
+}
+
+export { RootController }
