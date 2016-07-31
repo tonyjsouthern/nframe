@@ -3,3 +3,47 @@
 .container {
   width: 1100px;
 }
+
+.box {
+  margin-top: 25px;
+}
+
+.button {
+  width: 160px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.selectDevice {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.phoneTitleHome {
+  text-align: center;
+  font-size: 2em;
+}
+
+.card {
+  display: inline-block;
+  margin: 25px;
+}
