@@ -1,5 +1,5 @@
-// function HomeController () {
-//
-// }
-//
-// export { HomeController };
+function HomeController () {
+
+}
+
+export { HomeController };
