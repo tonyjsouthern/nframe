@@ -6,6 +6,7 @@
 
 .box {
   margin-top: 25px;
+  text-align: center;
 }
 
 .button {
@@ -35,7 +36,6 @@
 
 .selectDevice {
   text-align: center;
-  margin-bottom: 25px;
 }
 
 .phoneTitleHome {
@@ -46,4 +46,16 @@
 .card {
   display: inline-block;
   margin: 25px;
+}
+
+
+.mainimg {
+  height: 800px;
+  display: block;
+  position: relative;
+  margin: auto;
+}
+
+.box button {
+  margin: 0px 5px 0px 5px;
 }
