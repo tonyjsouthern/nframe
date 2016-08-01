@@ -19,6 +19,10 @@ function config ($stateProvider, $urlRouterProvider) {
     controller: 'Nexus5Controller as vm'
   })
 
+  .state('root.deviceList', {
+    url: '/devicelist',
+    templateUrl: 'templates/devicelist.templ.html',
+  })
   $urlRouterProvider.otherwise('/');
 
 }
