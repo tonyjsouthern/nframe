@@ -21,9 +21,16 @@ function config ($stateProvider, $urlRouterProvider) {
 
   .state('root.deviceList', {
     url: '/devicelist',
-    templateUrl: 'templates/devicelist.templ.html',
+    templateUrl: 'templates/devicelist.templ.html'
   })
+  .state('root.login', {
+    url: '/login',
+    templateUrl: 'templates/login.templ.html',
+    controller: 'LoginController as vm'
+  })
+
   $urlRouterProvider.otherwise('/');
+
 
 }
 

@@ -1,0 +1,26 @@
+<div class="loginCont">
+  <div class="box">
+  <form class="login-form" ng-show="vm.loginswitch">
+    <span> Login </span>
+    <input class="input" placeholder="Email Address">
+    <input class="input" type="password" placeholder="Password">
+    <button class="button is-primary">Submit</button>
+    <span>Don't have an account? Signup</span>
+    <a ng-click="vm.toggle()">here!</a>
+  </form>
+
+
+      <div class="register" ng-hide="vm.loginswitch">
+        <form class=login-form>
+          <span> Registration </span>
+          <input class="input" placeholder="Email Address">
+          <input class="input" placeholder="Username">
+          <input class="input" placeholder="Password">
+          <button class="button is-primary">Submit</button>
+        </form>
+        <span>Already have an account? Click</span>
+        <a ng-click="vm.toggle()">here</a>
+        <span>to login!</span>
+      </div>
+</div>
+</div>
