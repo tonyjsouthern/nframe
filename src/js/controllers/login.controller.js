@@ -17,7 +17,6 @@ function LoginController (UserService, $state, $cookies, $window) {
         console.log(res);
         $cookies.put('access_token', res.data.access_token);
         $cookies.put('username', res.data.username);
-        $window.location.reload();
         $state.go('root.home');
       },
       // Error Response (Client Error)

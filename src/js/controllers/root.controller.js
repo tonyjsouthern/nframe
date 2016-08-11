@@ -1,7 +1,7 @@
 function RootController (UserService, $state, $rootScope) {
 
   let vm = this;
-  // vm.buttonSwitch = false;
+  vm.buttonSwitch = false;
   vm.logOut = logOut
   vm.toggle = toggle;
   vm.loginCheck = loginCheck
