@@ -1,9 +1,9 @@
 <div class="loginCont">
   <div class="box">
-  <form class="login-form" ng-show="vm.loginswitch">
+  <form class="login-form" ng-show="vm.loginswitch" ng-submit="vm.login(user)">
     <span> Login </span>
-    <input class="input" placeholder="Email Address">
-    <input class="input" type="password" placeholder="Password">
+    <input class="input" placeholder="Email Address" ng-model="user.email">
+    <input class="input" type="password" placeholder="Password" ng-model="user.password">
     <button class="button is-primary">Submit</button>
     <span>Don't have an account? Signup</span>
     <a ng-click="vm.toggle()">here!</a>
@@ -11,11 +11,11 @@
 
 
       <div class="register" ng-hide="vm.loginswitch">
-        <form class=login-form>
+        <form class="login-form" ng-submit="vm.signUp(user)">
           <span> Registration </span>
-          <input class="input" placeholder="Email Address">
-          <input class="input" placeholder="Username">
-          <input class="input" placeholder="Password">
+          <input class="input" placeholder="Email Address" ng-model="user.email">
+          <input class="input" placeholder="Username" ng-model="user.username">
+          <input class="input" placeholder="Password"  type= "password" ng-model="user.password">
           <button class="button is-primary">Submit</button>
         </form>
         <span>Already have an account? Click</span>
