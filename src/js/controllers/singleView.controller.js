@@ -7,11 +7,10 @@ function SingleView ($scope) {
   vm.isActive = false;
   vm.background = "";
   vm.screenshot = "";
-
   function backgroundSelect () {
     filepicker.pick(
       function(Blob){
-        console.log(Blob.url)
+        console.log(Blob.url);
         vm.background = Blob.url;
         console.log(vm.background);
         $scope.$apply();
@@ -24,7 +23,7 @@ function SingleView ($scope) {
           console.log(Blob.url);
           vm.screenshot = Blob.url;
           console.log(vm.screenshot);
-          $scope.apply()
+          $scope.$apply();
         })
     }
 

@@ -2,8 +2,8 @@
   <button class="button" ng-click="vm.backgroundSelect()">Select Background</button>
   <button class="button" ng-click="vm.screenshotSelect()">Select Screenshot</button>
   <button class="button" ng-click="vm.blurToggle()">Toggle Blur</button>
-  Color: <input class="jscolor" value="ab2567">  <div class="imageCont">
   <img class="background" ng-class="{'backgroundblur': isActive}" ng-src="{{ vm.background }}">
+  <img class="screenshot" ng-src="{{ vm.screenshot }}">
   <img class="mainimg" src="images/phonetemplates/nexus5.png">
   <!-- <img class="background" ng-src="{{ vm.screenshot }}"> -->
 </div>
