@@ -13,10 +13,10 @@ function config ($stateProvider, $urlRouterProvider) {
     controller: 'HomeController as vm'
   })
 
-  .state('root.nexus5', {
-    url: '/nexus5',
-    templateUrl: 'templates/nexus5.templ.html',
-    controller: 'Nexus5Controller as vm'
+  .state('root.singleView', {
+    url: '/singleview',
+    templateUrl: 'templates/singleView.templ.html',
+    controller: 'SingleView as vm'
   })
 
   .state('root.deviceList', {
@@ -34,5 +34,5 @@ function config ($stateProvider, $urlRouterProvider) {
 
 }
 
-config.$inject = ['$stateProvider', '$urlRouterProvider'];
+config.$inject = ['$stateProvider', '$urlRouterProvider',];
 export { config };

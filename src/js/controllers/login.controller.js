@@ -1,4 +1,4 @@
-function LoginController (UserService, $state, $cookies, $window) {
+function LoginController (UserService, $state, $cookies) {
 
   let vm          = this;
   vm.loginswitch  = true;
@@ -34,5 +34,5 @@ function LoginController (UserService, $state, $cookies, $window) {
   }
 
 } // closing bracket
-LoginController.$inject = ['UserService', '$state', '$cookies', '$window'];
+LoginController.$inject = ['UserService', '$state', '$cookies'];
 export { LoginController };

@@ -31,7 +31,6 @@ function RootController (UserService, $state, $rootScope) {
   $rootScope.$on('loginChange', (event) => {
     loginCheck();
   });
-  loginCheck();
 }
 
 RootController.$inject = ['UserService', '$state', '$rootScope'];
