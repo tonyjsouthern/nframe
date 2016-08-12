@@ -1,10 +1,10 @@
 import angular from 'angular';
 import 'angular-ui-router';
 import 'angular-cookies';
-import $ from 'jquery'
 
 // import utilities
 import { config } from './utilities/config';
+import run from './utilities/run';
 import { serverConstant as SERVER } from './utilities/server.constant';
 
 // import controllers
@@ -19,6 +19,7 @@ import { UserService } from './services/user.service';
 angular
 .module('app', ['ui.router', 'ngCookies'])
 .config(config)
+.run(run)
 .constant('SERVER', SERVER)
 .controller('RootController', RootController)
 .controller('HomeController', HomeController)

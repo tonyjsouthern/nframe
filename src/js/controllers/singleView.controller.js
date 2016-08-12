@@ -7,6 +7,7 @@ function SingleView ($scope) {
   vm.isActive = false;
   vm.background = "";
   vm.screenshot = "";
+
   function backgroundSelect () {
     filepicker.pick(
       function(Blob){

@@ -4,22 +4,22 @@ function RootController (UserService, $state, $rootScope) {
   vm.buttonSwitch = false;
   vm.logOut = logOut
   vm.toggle = toggle;
-  vm.loginCheck = loginCheck
+  // vm.loginCheck = loginCheck
 
-  function loginCheck () {
-    console.log(UserService.isLoggedIn())
-    if (UserService.isLoggedIn() == true){
-      console.log("They are logged in.");
-      vm.buttonSwitch = true;
-    }else{
-      console.log("They are not logged in");
-      vm.buttonSwitch = false;
-    }
-  }
+  // function loginCheck () {
+  //   console.log(UserService.isLoggedIn())
+  //   if (UserService.isLoggedIn() == true){
+  //     console.log("They are logged in.");
+  //     vm.buttonSwitch = true;
+  //   }else{
+  //     console.log("They are not logged in");
+  //     vm.buttonSwitch = false;
+  //   }
+  // }
 
   function toggle () {
     $state.go('root.login')
-    loginCheck();
+    // loginCheck();
   }
 
   function logOut () {
@@ -28,8 +28,8 @@ function RootController (UserService, $state, $rootScope) {
     $state.go('root.home');
   }
 
-  $rootScope.$on('loginChange', (event) => {
-    loginCheck();
+  $rootScope.$on('loginChange', (event, status) => {
+    vm.buttonSwitch = status
   });
 }
 
