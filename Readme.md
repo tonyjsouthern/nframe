@@ -25,5 +25,9 @@ The idea of this application came from one written in VB that is no longer maint
 The website layout was made using Bulma (www.bulma.io)
 This is a project I will be working on in my free time updates will be slow.
 
+## Known Bugs
+Toggling blur causes background image to render incorrectly when saved
+Inability to save when either a screenshot or background is not present
+
 ## Page Link
 http://tiy-tj-nframe.surge.sh/
