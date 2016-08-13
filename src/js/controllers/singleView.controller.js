@@ -1,8 +1,12 @@
+import domtoimage from 'dom-to-image';
+import $ from 'jquery';
+
 function SingleView ($scope) {
 
   let vm = this;
   vm.backgroundSelect = backgroundSelect;
   vm.screenshotSelect = screenshotSelect;
+  vm.savePic = savePic;
   vm.blurToggle = blurToggle;
   vm.isActive = false;
   vm.background = "";
@@ -37,7 +41,26 @@ function SingleView ($scope) {
 
     }
 
+    let crash = document.getElementById("imageCont");
+
+    function savePic (){
+      domtoimage.toPng(crash).then ( function (dataUrl){
+        var img = new Image();
+        img.src = dataUrl;
+        document.body.appendChild(img);
+      })
+      .catch(function (error){
+        console.error('oops, something went wrong!', error);
+      })
+//       let imageBox = document.getElementsByClassName("imageCont");
+//     html2canvas(imageBox, {
+//       onrendered: function(canvas) {
+//         document.body.appendChild(canvas);
+//   }
+// });
 }
+
+} // close
 
 SingleView.$inject = ['$scope'];
 export { SingleView };
