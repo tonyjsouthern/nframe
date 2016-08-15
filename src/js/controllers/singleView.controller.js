@@ -31,49 +31,41 @@ function SingleView ($scope, $stateParams) {
           // console.log(vm.screenshot);
           $scope.$apply();
         })
-    }
-
-    function blurToggle () {
-      if ($scope.isActive === false){
-        $scope.isActive = true;
-      }else{
-        $scope.isActive = false;
       }
 
-    }
+      function blurToggle () {
+        if ($scope.isActive === false){
+          $scope.isActive = true;
+        }else{
+          $scope.isActive = false;
+        }
 
-    let crash = document.getElementById("imageCont");
+      }
 
-    function savePic (){
-      domtoimage.toPng(crash).then ( function (dataUrl){
-        var img = new Image();
-        img.src = dataUrl;
-        document.body.innerHTML(img);
-      })
-      .catch(function (error){
-        console.error('oops, something went wrong!', error);
-      })
-}
+      let crash = document.getElementById("imageCont");
 
-  function init () {
-    phones.filter (function () {
-      vm.phone = phones[$stateParams.id]
-      console.log(phones[$stateParams.id])
-      // console.log(vm.phone);
-    })
-  }
+      function savePic (){
+        domtoimage.toPng(crash).then ( function (dataUrl){
+          var img = new Image();
+          img.src = dataUrl;
+          document.body.appendChild(img);
+        })
+        .catch(function (error){
+          console.error('oops, something went wrong!', error);
+        })
+      }
 
-init()
+      function init () {
+        phones.filter (function () {
+          vm.phone = phones[$stateParams.id]
+          console.log(phones[$stateParams.id])
+          // console.log(vm.phone);
+        })
+      }
 
-} // close
+      init()
 
-SingleView.$inject = ['$scope', '$stateParams'];
-export { SingleView };
+    } // close
 
-
-
-// image urls:
-// https://cdn.filestackcontent.com/oSWh91xtRKSu8UXQ6KJc = nexus 5x
-// https://cdn.filestackcontent.com/zLqyHkXVTVOCL541OtSD = nexus 6p
-// https://cdn.filestackcontent.com/08UJVsQJRZqd3r6Jiix8 = nexus 5
-// https://cdn.filestackcontent.com/kavmaZIiTgu3KjW9RAIr = nexus 6
+    SingleView.$inject = ['$scope', '$stateParams'];
+    export { SingleView };

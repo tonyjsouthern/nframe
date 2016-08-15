@@ -2,19 +2,19 @@
   <p class="selectDevice">Select your device from the devices  below or use the drop-down menu above!</p>
 
   <div class="card" ng-repeat="phone in vm.phones">
-  <div class="card-image">
-    <a href="/#/singleview/{{ phone.id }}">
-    <figure class="image is-4by3">
-      <img class="phoneImageHome" attr="{{ phone.id }}" src="{{ phone.thumbUrl }}" alt="">
-    </figure>
-  </div>
-  <div class="card-content">
-    <div class="media">
-      <div class="media-content">
-        <p class="phoneTitleHome">{{ phone.model }}</p>
+    <div class="card-image">
+      <a href="/#/singleview/{{ phone.id }}">
+        <figure class="image is-4by3">
+          <img class="phoneImageHome" attr="{{ phone.id }}" src="{{ phone.thumbUrl }}" alt="">
+        </figure>
       </div>
-    </div>
-    </div>
-  </a>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p class="phoneTitleHome">{{ phone.model }}</p>
+          </div>
+        </div>
+      </div>
+    </a>
   </div>
 </div>

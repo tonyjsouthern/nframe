@@ -112,11 +112,40 @@ $purple: #847bb9;
   overflow: hidden;
 }
 
-.screenshot {
+// CSS for phone screenshots
+
+.Nexus-5 {
   position: absolute;
   width: 303px;
   height: 538px;
   left: 85px;
   bottom: 140px;
+  z-index: 1;
+}
+
+.Nexus-6 {
+  position: absolute;
+  width: 295px;
+  height: 563px;
+  left: 90px;
+  bottom: 116px;
+  z-index: 1;
+}
+
+.Nexus-6p {
+  position: absolute;
+  width: 299px;
+  height: 531px;
+  left: 78px;
+  bottom: 134px;
+  z-index: 1;
+}
+
+.Nexus-5x {
+  position: absolute;
+  width: 299px;
+  height: 527px;
+  left: 87px;
+  bottom: 139px;
   z-index: 1;
 }
