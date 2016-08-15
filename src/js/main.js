@@ -1,7 +1,6 @@
 import angular from 'angular';
 import 'angular-ui-router';
 import 'angular-cookies';
-import $ from 'jquery';
 import domtoimage from 'dom-to-image';
 
 // import utilities

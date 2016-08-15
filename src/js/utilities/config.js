@@ -14,13 +14,13 @@ function config ($stateProvider, $urlRouterProvider) {
   })
 
   .state('root.singleView', {
-    url: '/singleview',
+    url: '/singleview/:id',
     templateUrl: 'templates/singleView.templ.html',
     controller: 'SingleView as vm'
   })
 
   .state('root.deviceList', {
-    url: '/devicelist',
+    url: '/devicelist/',
     templateUrl: 'templates/devicelist.templ.html'
   })
 

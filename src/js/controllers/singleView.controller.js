@@ -1,7 +1,7 @@
 import domtoimage from 'dom-to-image';
-import $ from 'jquery';
+import { phones } from '../phones.js'
 
-function SingleView ($scope) {
+function SingleView ($scope, $stateParams) {
 
   let vm = this;
   vm.backgroundSelect = backgroundSelect;
@@ -11,13 +11,14 @@ function SingleView ($scope) {
   vm.isActive = false;
   vm.background = "";
   vm.screenshot = "";
+  // vm.filterID = filterID
 
   function backgroundSelect () {
     filepicker.pick(
       function(Blob){
-        console.log(Blob.url);
+        // console.log(Blob.url);
         vm.background = Blob.url;
-        console.log(vm.background);
+        // console.log(vm.background);
         $scope.$apply();
       });
     }
@@ -25,9 +26,9 @@ function SingleView ($scope) {
     function screenshotSelect () {
       filepicker.pick(
         function(Blob){
-          console.log(Blob.url);
+          // console.log(Blob.url);
           vm.screenshot = Blob.url;
-          console.log(vm.screenshot);
+          // console.log(vm.screenshot);
           $scope.$apply();
         })
     }
@@ -47,22 +48,26 @@ function SingleView ($scope) {
       domtoimage.toPng(crash).then ( function (dataUrl){
         var img = new Image();
         img.src = dataUrl;
-        document.body.appendChild(img);
+        document.body.innerHTML(img);
       })
       .catch(function (error){
         console.error('oops, something went wrong!', error);
       })
-//       let imageBox = document.getElementsByClassName("imageCont");
-//     html2canvas(imageBox, {
-//       onrendered: function(canvas) {
-//         document.body.appendChild(canvas);
-//   }
-// });
 }
+
+  function init () {
+    phones.filter (function () {
+      vm.phone = phones[$stateParams.id]
+      console.log(phones[$stateParams.id])
+      // console.log(vm.phone);
+    })
+  }
+
+init()
 
 } // close
 
-SingleView.$inject = ['$scope'];
+SingleView.$inject = ['$scope', '$stateParams'];
 export { SingleView };
 
 
