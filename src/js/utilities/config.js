@@ -20,7 +20,7 @@ function config ($stateProvider, $urlRouterProvider) {
   })
 
   .state('root.deviceList', {
-    url: '/devicelist/',
+    url: '/devicelist',
     templateUrl: 'templates/devicelist.templ.html'
   })
 
