@@ -1,11 +1,24 @@
-<div class="box">
+<div class="box tool-box">
+  <p>Tools:</p>
   <button class="button" ng-click="vm.backgroundSelect()">Select Background</button>
   <button class="button" ng-click="vm.screenshotSelect()">Select Screenshot</button>
   <button class="button" ng-click="vm.blurToggle()">Toggle Blur</button>
   <button class="button" ng-click="vm.savePic()">Save</button>
+</div>
+
+<div class="box device-box">
+  <p> Phones: </p>
+    <a ng-repeat="phone in vm.phones" href="/#/singleview/{{ phone.id }}">{{ phone.name }}<br></a>
+</div>
+
+<div class="box phone-box">
   <div id="imageCont">
     <img class="background" ng-class="{'backgroundblur': isActive}" src="{{ vm.background }}">
     <img class="{{ vm.phone.model }}" ng-src="{{ vm.screenshot }}">
     <img class="mainimg" src="{{ vm.phone.url }}">
   </div>
+</div>
+</div class="box">
+<div class="savedImage">
+</div>
 </div>

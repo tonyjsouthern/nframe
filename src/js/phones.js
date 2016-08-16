@@ -31,12 +31,21 @@ var phones = [
     "url": "http://imgur.com/PlOhVxI.png",
     "thumbUrl": "http://i.imgur.com/3vKcT7H.png"
   },
-{
-  "id": "4",
-  "name": "iPhone 6s",
-  "model": "iPhone-6s",
-  "url": "http://i.imgur.com/uRpSlV1.png",
-  "thumbUrl": "http://i.imgur.com/NQFksq2.png"
-}];
+  // LG G3
+  {
+    "id": "4",
+    "name": "LG G3",
+    "model": "LGG3",
+    "url": "http://i.imgur.com/j3vvOfM.png",
+    "thumbUrl": "http://i.imgur.com/JbilZyE.png"
+  },
+  // iPhone 6s/6
+  {
+    "id": "5",
+    "name": "iPhone 6s",
+    "model": "iPhone-6s",
+    "url": "http://i.imgur.com/uRpSlV1.png",
+    "thumbUrl": "http://i.imgur.com/NQFksq2.png"
+  }];
 
   export { phones }

@@ -11,7 +11,8 @@ function SingleView ($scope, $stateParams) {
   vm.isActive = false;
   vm.background = "";
   vm.screenshot = "";
-  // vm.filterID = filterID
+  vm.phones = phones
+
 
   function backgroundSelect () {
     filepicker.pick(
