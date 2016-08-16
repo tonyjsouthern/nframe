@@ -1,5 +1,5 @@
 <div class="box tool-box">
-  <p>Tools:</p>
+  <p class="title is-3">Tools:</p>
   <button class="button" ng-click="vm.backgroundSelect()">Select Background</button>
   <button class="button" ng-click="vm.screenshotSelect()">Select Screenshot</button>
   <button class="button" ng-click="vm.blurToggle()">Toggle Blur</button>
@@ -7,7 +7,7 @@
 </div>
 
 <div class="box device-box">
-  <p> Phones: </p>
+  <p class="title is-3"> Phones: </p>
     <a ng-repeat="phone in vm.phones" href="/#/singleview/{{ phone.id }}">{{ phone.name }}<br></a>
 </div>
 
