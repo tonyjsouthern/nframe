@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>N-Frame</title>
+
+  <!-- CSS StyleSheets -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+
+  <!-- Filestack import -->
   <script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
   <script>filepicker.setKey("AuoVXagi8TIOn4y06G4urz");</script>
-  <script src="js/html2canvas.js"></script>
+
+
+  <!-- Draggable  -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 </head>
+
 <body ng-app="app">
-  <div class="container" ui-view>
+ <div class="container" ui-view>
     {{ 5+5 }}
-  </div>
-  <script src="js/bundle.js"></script>
+ </div>
+ <script src="js/bundle.js"></script>
 </body>
 </html>

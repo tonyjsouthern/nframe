@@ -47,6 +47,10 @@ $purple: #847bb9;
 .card {
   display: inline-block;
   margin: 25px;
+  &:hover{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    color: black;
+  }
 }
 
 
@@ -140,6 +144,10 @@ $purple: #847bb9;
 .input {
   width: 160px;
   margin-bottom: 25px;
+}
+
+.phoneText {
+  z-index: 3;
 }
 // CSS for phone screenshots
 

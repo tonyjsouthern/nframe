@@ -4,8 +4,8 @@
   <button class="button" ng-click="vm.screenshotSelect()">Select Screenshot</button>
   <button class="button" ng-click="vm.blurToggle()">Toggle Blur</button>
   <button class="button" ng-click="vm.savePic()">Save</button>
-  <input class="input" placeholder="Main Text"></input>
-  <input class="input" placeholder="Main Text"></input>
+  <input ng-model="main.text" class="input" placeholder="Main Text"></input>
+  <input ng-model="secondary.text" class="input" placeholder="Secondary Text"></input>
 </div>
 
 <div class="box device-box">
@@ -14,13 +14,17 @@
 </div>
 
 <div class="box phone-box">
-  <div id="imageCont">
+  <div id="imageCont" jqyoui-droppable="{onDrop: 'vm.drop()'}" data-drop="true">
+    <p class="phoneText" jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}">{{ main.text }}</p>
+    <p class="phoneText" jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}">{{ secondary.text }}</p>
     <img class="background" ng-class="{'backgroundblur': isActive}" src="{{ vm.background }}">
     <img class="{{ vm.phone.model }}" ng-src="{{ vm.screenshot }}">
     <img class="mainimg" src="{{ vm.phone.url }}">
   </div>
 </div>
-</div class="box">
+<div class="box">
 <div class="savedImage">
 </div>
 </div>
+
+<!-- <li jqyoui-draggable data-drag="true" data-jqyoui-options="{helper: 'clone', revert: 'invalid'}"> -->

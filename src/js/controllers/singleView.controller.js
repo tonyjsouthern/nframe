@@ -12,6 +12,7 @@ function SingleView ($scope, $stateParams) {
   vm.background = "";
   vm.screenshot = "";
   vm.phones = phones
+  vm.drop = drop;
 
 
   function backgroundSelect () {
@@ -59,12 +60,16 @@ function SingleView ($scope, $stateParams) {
       function init () {
         phones.filter (function () {
           vm.phone = phones[$stateParams.id]
-          console.log(phones[$stateParams.id])
-          // console.log(vm.phone);
+
         })
       }
 
       init()
+
+      function drop (event, ui) {
+        // $('.imageCont')
+        console.log(ui);
+      }
 
     } // close
 
