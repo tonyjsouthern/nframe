@@ -6,6 +6,7 @@ function SingleView ($scope, $stateParams) {
   let vm = this;
   vm.backgroundSelect = backgroundSelect;
   vm.screenshotSelect = screenshotSelect;
+  vm.setFontColor = setFontColor;
   vm.savePic = savePic;
   vm.blurToggle = blurToggle;
   vm.isActive = false;
@@ -18,9 +19,7 @@ function SingleView ($scope, $stateParams) {
   function backgroundSelect () {
     filepicker.pick(
       function(Blob){
-        // console.log(Blob.url);
         vm.background = Blob.url;
-        // console.log(vm.background);
         $scope.$apply();
       });
     }
@@ -28,9 +27,7 @@ function SingleView ($scope, $stateParams) {
     function screenshotSelect () {
       filepicker.pick(
         function(Blob){
-          // console.log(Blob.url);
           vm.screenshot = Blob.url;
-          // console.log(vm.screenshot);
           $scope.$apply();
         })
       }
@@ -43,20 +40,21 @@ function SingleView ($scope, $stateParams) {
         }
 
       }
-
-      let crash = document.getElementById("imageCont");
+      // Save Image
+      let selectImage = document.getElementById("imageCont");
 
       function savePic (){
-        domtoimage.toPng(crash).then ( function (dataUrl){
-          var img = new Image();
+        domtoimage.toPng(selectImage).then ( function (dataUrl){
+          var img = new Image()
           img.src = dataUrl;
-          document.body.appendChild(img);
+          $('.savedImage').html(img)
         })
         .catch(function (error){
           console.error('oops, something went wrong!', error);
         })
       }
 
+      // init function
       function init () {
         phones.filter (function () {
           vm.phone = phones[$stateParams.id]
@@ -66,9 +64,18 @@ function SingleView ($scope, $stateParams) {
 
       init()
 
+      // drop event for draggables
       function drop (event, ui) {
-        // $('.imageCont')
-        console.log(ui);
+      }
+
+      var hexvalue = $('.jscolor').val()
+
+      // font editing tools
+      function setFontColor (){
+        var hexvalue = $('.jscolor').val()
+        hexvalue = "#" + hexvalue
+        document.getElementById("phoneTextTwo").style.color = hexvalue
+        document.getElementById("phoneTextOne").style.color = hexvalue
       }
 
     } // close

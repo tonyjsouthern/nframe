@@ -1,30 +1,42 @@
+<script src="js/jscolor.js"></script>
+
 <div class="box tool-box">
-  <p class="title is-3">Tools:</p>
+
+  <p class="title is-5">Image Tools:</p>
   <button class="button" ng-click="vm.backgroundSelect()">Select Background</button>
   <button class="button" ng-click="vm.screenshotSelect()">Select Screenshot</button>
   <button class="button" ng-click="vm.blurToggle()">Toggle Blur</button>
-  <button class="button" ng-click="vm.savePic()">Save</button>
+
+  <p class="title is-5">Text Tools:</p>
   <input ng-model="main.text" class="input" placeholder="Main Text"></input>
   <input ng-model="secondary.text" class="input" placeholder="Secondary Text"></input>
+  <input class="jscolor input" value="ab2567">
+  <button class="button" ng-click="vm.setFontColor()">Set Font Color</button>
+  <button class="button" ng-click="vm.savePic()">Save</button>
+
 </div>
 
 <div class="box device-box">
   <p class="title is-3"> Phones: </p>
-    <a ng-repeat="phone in vm.phones" href="/#/singleview/{{ phone.id }}">{{ phone.name }}<br></a>
+  <a ng-repeat="phone in vm.phones" href="/#/singleview/{{ phone.id }}">{{ phone.name }}<br></a>
 </div>
 
 <div class="box phone-box">
   <div id="imageCont" jqyoui-droppable="{onDrop: 'vm.drop()'}" data-drop="true">
-    <p class="phoneText" jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}">{{ main.text }}</p>
-    <p class="phoneText" jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}">{{ secondary.text }}</p>
+
+    <!-- Draggable Text Above Phone -->
+    <p id="phoneTextOne"  jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}">{{ main.text }}</p>
+    <p id="phoneTextTwo" jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}">{{ secondary.text }}</p>
+
+    <!-- Background Images -->
     <img class="background" ng-class="{'backgroundblur': isActive}" src="{{ vm.background }}">
     <img class="{{ vm.phone.model }}" ng-src="{{ vm.screenshot }}">
     <img class="mainimg" src="{{ vm.phone.url }}">
+
   </div>
 </div>
-<div class="box">
-<div class="savedImage">
-</div>
-</div>
 
-<!-- <li jqyoui-draggable data-drag="true" data-jqyoui-options="{helper: 'clone', revert: 'invalid'}"> -->
+<div class="box">
+  <div class="savedImage">
+  </div>
+</div>

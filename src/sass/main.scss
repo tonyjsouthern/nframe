@@ -133,7 +133,7 @@ $purple: #847bb9;
   width: 22%;
   position: absolute;
   right: 0px;
-  top: 510px;
+  top: 535px;
   text-align: left;
 }
 
@@ -148,6 +148,11 @@ $purple: #847bb9;
 
 .phoneText {
   z-index: 3;
+  height: 0px;
+}
+
+.jscolor {
+  color: white;
 }
 // CSS for phone screenshots
 
