@@ -10,8 +10,8 @@ function SingleView ($scope, $stateParams) {
   vm.savePic = savePic;
   vm.blurToggle = blurToggle;
   vm.isActive = false;
-  vm.background = "https://github.com/tonyjsouthern/nframe/blob/master/app/images/Blanks/blankmain.png?raw=true";
-  vm.screenshot = "https://github.com/tonyjsouthern/nframe/blob/master/app/images/Blanks/blankscreen.png?raw=true";
+  vm.background = "./images/Blanks/blankmain.png";
+  vm.screenshot = "./images/Blanks/blankscreen.png";
   vm.phones = phones
   vm.drop = drop;
 
