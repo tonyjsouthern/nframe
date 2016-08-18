@@ -15,7 +15,6 @@ function SingleView ($scope, $stateParams) {
   vm.phones = phones
   vm.drop = drop;
 
-
   function backgroundSelect () {
     filepicker.pick(
       function(Blob){
@@ -62,21 +61,23 @@ function SingleView ($scope, $stateParams) {
         })
       }
 
+      
+
       init()
 
       // drop event for draggables
       function drop (event, ui) {
       }
 
-      var hexvalue = $('.jscolor').val()
 
       // font editing tools
       function setFontColor (){
-        var hexvalue = $('.jscolor').val()
-        hexvalue = "#" + hexvalue
-        document.getElementById("phoneTextTwo").style.color = hexvalue
-        document.getElementById("phoneTextOne").style.color = hexvalue
+        var hsvalue = $('.colorpicker').val()
+        console.log(hsvalue)
+        document.getElementById("phoneTextTwo").style.color = hsvalue
+        document.getElementById("phoneTextOne").style.color = hsvalue
       }
+
 
     } // close
 

@@ -1,5 +1,6 @@
 $purple: #847bb9;
 @import "bulma";
+@import "color-picker";
 
 .container {
   width: 1100px;
@@ -118,8 +119,9 @@ $purple: #847bb9;
 }
 
 .phone-box {
-  width: 75%;
+  width: 55%;
   position: relative;
+  margin: 25px auto;
 }
 
 .tool-box {
@@ -127,14 +129,14 @@ $purple: #847bb9;
   position: absolute;
   right: 0px;
   top: 50px;
+  height: 840px;
 }
 
 .device-box {
   width: 22%;
   position: absolute;
-  right: 0px;
-  top: 645px;
-  text-align: left;
+  top: 50px;
+  height: 840px;
 }
 
 .device-box p {
@@ -146,14 +148,33 @@ $purple: #847bb9;
   margin-bottom: 25px;
 }
 
-.phoneText {
+#phoneTextOne {
   z-index: 3;
   height: 0px;
 }
 
-.jscolor {
-  color: white;
+#phoneTextTwo {
+  z-index: 3;
+  height: 0px;
 }
+
+.color-picker-input-wrapper {
+  margin: 0 auto;
+  width: 135px;
+  margin-bottom: 25px;
+}
+
+.color-picker-wrapper .input-group .color-picker-input-swatch {
+width: 135px;
+}
+
+.colorpicker {
+  visibility: hidden;
+  height: 0px;
+}
+// .savedImage {
+//   margin: auto;
+// }
 // CSS for phone screenshots
 
 .Nexus-5 {

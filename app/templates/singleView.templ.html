@@ -1,22 +1,24 @@
 
-
 <div class="box tool-box">
   <p class="title is-5">Image Tools:</p>
   <button class="button" ng-click="vm.backgroundSelect()">Select Background</button>
   <button class="button" ng-click="vm.screenshotSelect()">Select Screenshot</button>
   <button class="button" ng-click="vm.blurToggle()">Toggle Blur</button>
 
-  <p class="title is-5">Text Tools:</p>
-  <input ng-model="main.text" class="input" placeholder="Main Text"></input>
-  <input ng-model="secondary.text" class="input" placeholder="Secondary Text"></input>
-  <input class="jscolor input" value="ab2567">
-  <button class="button" ng-click="vm.setFontColor()">Set Font Color</button>
+
   <button class="button" ng-click="vm.savePic()">Save</button>
 </div>
 
 <div class="box device-box">
-  <p class="title is-3"> Phones: </p>
-  <a ng-repeat="phone in vm.phones" href="/#/singleview/{{ phone.id }}">{{ phone.name }}<br></a>
+  <p class="title is-5">Text Tools:</p>
+  <input ng-model="main.text" class="input" placeholder="Main Text"></input>
+  <input ng-model="secondary.text" class="input" placeholder="Secondary Text"></input>
+
+
+  <color-picker ng-model="myColor"></color-picker>
+
+  <button class="button" ng-click="vm.setFontColor()">Set Font Color</button>
+  <button class="button" ng-click="vm.savePic()">Save</button>
 </div>
 
 <div class="box phone-box">
@@ -34,7 +36,7 @@
   </div>
 </div>
 
-<div class="box">
-  <div class="savedImage">
-  </div>
+<div class="box savedImage">
+
 </div>
+<input class="colorpicker" value="{{ myColor }}">

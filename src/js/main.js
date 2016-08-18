@@ -3,7 +3,7 @@ import 'angular-ui-router';
 import 'angular-cookies';
 import 'angular-dragdrop';
 import domtoimage from 'dom-to-image';
-
+import 'angularjs-color-picker';
 
 // import utilities
 import { config } from './utilities/config';
@@ -20,7 +20,7 @@ import { LoginController } from  './controllers/login.controller.js';
 import { UserService } from './services/user.service';
 
 angular
-.module('app', ['ui.router', 'ngCookies', 'ngDragDrop'])
+.module('app', ['ui.router', 'ngCookies', 'ngDragDrop', 'color.picker'])
 .config(config)
 .run(run)
 .constant('SERVER', SERVER)
