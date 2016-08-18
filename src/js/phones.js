@@ -4,7 +4,7 @@ var phones = [
     "id": "0",
     "name": "Nexus 5",
     "model": "Nexus-5",
-    "url": "http://imgur.com/P26cZUt.png",
+    "url": "/../app/images/Nexus5/Nexus5.png",
     "thumbUrl": "http://i.imgur.com/IWePC3c.png"
   },
   // nexus 6
