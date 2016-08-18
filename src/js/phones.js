@@ -21,7 +21,7 @@ var phones = [
     "name": "Nexus 6P",
     "model": "Nexus-6p",
     "url": "https://github.com/tonyjsouthern/nframe/blob/master/app/images/Nexus6p/Nexus6p.png?raw=true",
-    "thumbUrl": "http://i.imgur.com/lOVgHTp.png"
+    "thumbUrl": "https://github.com/tonyjsouthern/nframe/blob/master/app/images/Nexus6p/Nexus6pthumb.png?raw=true"
   },
   // nexus 5x
   {
@@ -29,7 +29,7 @@ var phones = [
     "name": "Nexus 5x",
     "model": "Nexus-5x",
     "url": "https://github.com/tonyjsouthern/nframe/blob/master/app/images/Nexus5x/Nexus5x.png?raw=true",
-    "thumbUrl": "http://i.imgur.com/3vKcT7H.png"
+    "thumbUrl": "https://github.com/tonyjsouthern/nframe/blob/master/app/images/Nexus5x/Nexus5xthumb.png?raw=true"
   },
   // LG G3
   {
