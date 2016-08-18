@@ -3,9 +3,8 @@
   <p class="title is-5">Image Tools:</p>
   <button class="button" ng-click="vm.backgroundSelect()">Select Background</button>
   <button class="button" ng-click="vm.screenshotSelect()">Select Screenshot</button>
+  <!-- <button class="button" ng-click="vm.logoSelect()">Select Logo</button> -->
   <button class="button" ng-click="vm.blurToggle()">Toggle Blur</button>
-
-
   <button class="button" ng-click="vm.savePic()">Save</button>
 </div>
 
@@ -13,30 +12,35 @@
   <p class="title is-5">Text Tools:</p>
   <input ng-model="main.text" class="input" placeholder="Main Text"></input>
   <input ng-model="secondary.text" class="input" placeholder="Secondary Text"></input>
-
-
+  <span class="title is-6">Font Color:</span>
   <color-picker ng-model="myColor"></color-picker>
+  <button class="button" ng-click="vm.setFontColor()">Apply</button>
 
-  <button class="button" ng-click="vm.setFontColor()">Set Font Color</button>
-  <button class="button" ng-click="vm.savePic()">Save</button>
+<span class="title is-6">Font Size</span>
+<div class="select-style">
+  <select>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+</select>
+</div>
+
 </div>
 
 <div class="box phone-box">
   <div id="imageCont" jqyoui-droppable="{onDrop: 'vm.drop()'}" data-drop="true">
-
     <!-- Draggable Text Above Phone -->
     <p id="phoneTextOne"  jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}">{{ main.text }}</p>
     <p id="phoneTextTwo" jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}">{{ secondary.text }}</p>
-
     <!-- Background Images -->
     <img class="background" ng-class="{'backgroundblur': isActive}" src="{{ vm.background }}">
     <img class="{{ vm.phone.model }}" ng-src="{{ vm.screenshot }}">
     <img class="mainimg" src="{{ vm.phone.url }}">
-
+    <!-- <img class="logo" jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}"src = "{{ vm.logo }}" -->
   </div>
 </div>
 
 <div class="box savedImage">
-
 </div>
 <input class="colorpicker" value="{{ myColor }}">

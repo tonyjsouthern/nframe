@@ -6,12 +6,14 @@ function SingleView ($scope, $stateParams) {
   let vm = this;
   vm.backgroundSelect = backgroundSelect;
   vm.screenshotSelect = screenshotSelect;
+  vm.logoSelect = logoSelect;
   vm.setFontColor = setFontColor;
   vm.savePic = savePic;
   vm.blurToggle = blurToggle;
   vm.isActive = false;
   vm.background = "./images/Blanks/blankmain.png";
   vm.screenshot = "./images/Blanks/blankscreen.png";
+  vm.logo = "./images/Blanks/logo.png"
   vm.phones = phones
   vm.drop = drop;
 
@@ -29,6 +31,14 @@ function SingleView ($scope, $stateParams) {
           vm.screenshot = Blob.url;
           $scope.$apply();
         })
+      }
+
+      function logoSelect () {
+        filepicker.pick(
+          function(Blob){
+            vm.logo = Blob.url;
+            $scope.$apply();
+          })
       }
 
       function blurToggle () {
@@ -61,13 +71,17 @@ function SingleView ($scope, $stateParams) {
         })
       }
 
-      
+
 
       init()
 
-      // drop event for draggables
+      // drop event for draggables and resiazbles
       function drop (event, ui) {
       }
+
+      $( function() {
+        $( "#phoneTextOne" ).resizable();
+      } );
 
 
       // font editing tools
