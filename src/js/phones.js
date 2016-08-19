@@ -5,7 +5,7 @@ var phones = [
     "name": "Nexus 5",
     "model": "Nexus-5",
     "url": "./images/Nexus5/Nexus5.png",
-    "thumbUrl": "./images/Nexus5/Nexus5thumb.png"
+    "thumbUrl": "./images/Nexus5/nexus5thumb.png"
   },
   // nexus 6
   {
@@ -13,7 +13,7 @@ var phones = [
     "name": "Nexus 6",
     "model": "Nexus-6",
     "url": "./images/Nexus6/Nexus6.png",
-    "thumbUrl": "./images/Nexus6/Nexus6thumb.png"
+    "thumbUrl": "./images/Nexus6/nexus6thumb.png"
   },
   // Nexus 6p
   {
@@ -44,7 +44,7 @@ var phones = [
     "id": "5",
     "name": "iPhone 6s",
     "model": "iPhone-6s",
-    "url": "./images/iPhone6/iPhone6.png",
+    "url": "./images/iPhone6/iphone6.png",
     "thumbUrl": "./images/iPhone6/iPhone6thumb.png"
   }];
 
