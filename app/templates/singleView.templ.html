@@ -29,7 +29,7 @@
     <p id="phoneTextOne" ng-style="{'font-size': slider.value}"  jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}">{{ main.text }}</p>
     <p id="phoneTextTwo" ng-style="{'font-size': sliderTwo.value}" jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}">{{ secondary.text }}</p>
     <!-- Background Images -->
-    <img class="background" ng-class="{'backgroundblur': isActive}" src="{{ vm.background }}">
+    <img class="background" jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-class="{'backgroundblur': isActive}" src="{{ vm.background }}">
     <img class="{{ vm.phone.model }}" ng-src="{{ vm.screenshot }}">
     <img class="mainimg" src="{{ vm.phone.url }}">
     <img class="logo" ng-style="{height: sliderLogo.value}" jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}" src = "{{ vm.logo }}">
