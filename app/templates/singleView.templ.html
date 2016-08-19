@@ -3,9 +3,10 @@
   <p class="title is-5">Image Tools:</p>
   <button class="button" ng-click="vm.backgroundSelect()">Select Background</button>
   <button class="button" ng-click="vm.screenshotSelect()">Select Screenshot</button>
-  <!-- <button class="button" ng-click="vm.logoSelect()">Select Logo</button> -->
+  <button class="button" ng-click="vm.logoSelect()">Select Logo</button>
   <button class="button" ng-click="vm.blurToggle()">Toggle Blur</button>
   <button class="button" ng-click="vm.savePic()">Save</button>
+  <rzslider rz-slider-model="sliderLogo.value"></rzslider>
 </div>
 
 <div class="box device-box">
@@ -16,28 +17,22 @@
   <color-picker ng-model="myColor"></color-picker>
   <button class="button" ng-click="vm.setFontColor()">Apply</button>
 
-<span class="title is-6">Font Size</span>
-<div class="select-style">
-  <select>
-  <option value="11">11</option>
-  <option value="12">12</option>
-  <option value="13">13</option>
-  <option value="14">14</option>
-</select>
+  <span class="title is-6">Font Size</span>
+  <rzslider rz-slider-model="slider.value"></rzslider>
+  <rzslider rz-slider-model="sliderTwo.value"></rzslider>
 </div>
-
 </div>
 
 <div class="box phone-box">
   <div id="imageCont" jqyoui-droppable="{onDrop: 'vm.drop()'}" data-drop="true">
     <!-- Draggable Text Above Phone -->
-    <p id="phoneTextOne"  jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}">{{ main.text }}</p>
-    <p id="phoneTextTwo" jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}">{{ secondary.text }}</p>
+    <p id="phoneTextOne" ng-style="{'font-size': slider.value}"  jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}">{{ main.text }}</p>
+    <p id="phoneTextTwo" ng-style="{'font-size': sliderTwo.value}" jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}">{{ secondary.text }}</p>
     <!-- Background Images -->
     <img class="background" ng-class="{'backgroundblur': isActive}" src="{{ vm.background }}">
     <img class="{{ vm.phone.model }}" ng-src="{{ vm.screenshot }}">
     <img class="mainimg" src="{{ vm.phone.url }}">
-    <!-- <img class="logo" jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}"src = "{{ vm.logo }}" -->
+    <img class="logo" ng-style="{height: sliderLogo.value}" jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}" src = "{{ vm.logo }}">
   </div>
 </div>
 

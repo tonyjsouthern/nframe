@@ -4,6 +4,7 @@ import 'angular-cookies';
 import 'angular-dragdrop';
 import domtoimage from 'dom-to-image';
 import 'angularjs-color-picker';
+import 'angularjs-slider';
 
 // import utilities
 import { config } from './utilities/config';
@@ -20,7 +21,7 @@ import { LoginController } from  './controllers/login.controller.js';
 import { UserService } from './services/user.service';
 
 angular
-.module('app', ['ui.router', 'ngCookies', 'ngDragDrop', 'color.picker'])
+.module('app', ['ui.router', 'ngCookies', 'ngDragDrop', 'color.picker', 'rzModule'])
 .config(config)
 .run(run)
 .constant('SERVER', SERVER)

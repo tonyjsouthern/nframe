@@ -4,18 +4,45 @@ import { phones } from '../phones.js'
 function SingleView ($scope, $stateParams) {
 
   let vm = this;
-  vm.backgroundSelect = backgroundSelect;
-  vm.screenshotSelect = screenshotSelect;
-  vm.logoSelect = logoSelect;
-  vm.setFontColor = setFontColor;
-  vm.savePic = savePic;
-  vm.blurToggle = blurToggle;
-  vm.isActive = false;
-  vm.background = "./images/Blanks/blankmain.png";
-  vm.screenshot = "./images/Blanks/blankscreen.png";
-  vm.logo = "./images/Blanks/logo.png"
-  vm.phones = phones
-  vm.drop = drop;
+  vm.backgroundSelect     = backgroundSelect;
+  vm.screenshotSelect     = screenshotSelect;
+  vm.logoSelect           = logoSelect;
+  vm.setFontColor         = setFontColor;
+  vm.setFontSize          = setFontSize
+  vm.savePic              = savePic;
+  vm.blurToggle           = blurToggle;
+  vm.isActive             = false;
+  vm.background           = "./images/Blanks/blankmain.png";
+  vm.screenshot           = "./images/Blanks/blankscreen.png";
+  // vm.logo                 = "./images/Blanks/logo.png"
+  vm.phones               = phones
+  vm.drop                 = drop;
+
+
+  $scope.sliderLogo = {
+    value: 200,
+    options: {
+      floor: 0,
+      ceil: 50
+    }
+  };
+
+  $scope.sliderTwo = {
+    value: 50,
+    options: {
+      floor: 0,
+      ceil: 50
+    }
+  };
+
+
+  $scope.slider = {
+  value: 50,
+  options: {
+    floor: 0,
+    ceil: 50
+  }
+};
 
   function backgroundSelect () {
     filepicker.pick(
@@ -71,8 +98,6 @@ function SingleView ($scope, $stateParams) {
         })
       }
 
-
-
       init()
 
       // drop event for draggables and resiazbles
@@ -93,6 +118,14 @@ function SingleView ($scope, $stateParams) {
       }
 
 
+      function setFontSize() {
+        var selectValue = $('.button').val();
+        console.log(selectValue)
+        document.getElementById("phoneTextTwo").style.fontSize = selectValue;
+        document.getElementById("phoneTextOne").style.fontSize = selectValue;
+      }
+
+      setFontSize();
     } // close
 
     SingleView.$inject = ['$scope', '$stateParams'];
