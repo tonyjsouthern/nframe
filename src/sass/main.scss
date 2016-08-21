@@ -136,6 +136,10 @@ $purple: #847bb9;
   text-align: center;
 }
 
+.device-box-two {
+  position: absolute;
+}
+
 .input {
   width: 160px;
   margin-bottom: 25px;
@@ -217,8 +221,19 @@ button.buttonGrid {
   background-color: $purple;
 }
 
-.slider {
-  margin-bottom: 30px;
+.rzslider {
+  margin-bottom: 35px;
+  border-bottom: 5px;
+}
+
+.tools{
+  padding-bottom: 5px;
+  border-bottom: solid lightgrey 1px;
+}
+
+.border {
+  border-bottom: solid lightgrey 1px;
+  margin-bottom: 20px;
 }
 
 

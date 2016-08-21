@@ -1,27 +1,32 @@
 
 <div class="box tool-box">
-  <p class="title is-5">Image Tools:</p>
+  <p class="title is-5 tools">Image Tools:</p>
   <button class="button" ng-click="vm.backgroundSelect()">Select Background</button>
   <button class="button" ng-click="vm.screenshotSelect()">Select Screenshot</button>
-  <button class="button" ng-click="vm.logoSelect()">Select Logo</button>
   <button class="button" ng-click="vm.blurToggle()">Toggle Blur</button>
-  <button class="button" ng-click="vm.savePic()">Save</button>
+  <p class="border"></p>
+  <button class="button" ng-click="vm.logoSelect()">Select Logo</button>
+  <p>Logo Size:</p>
   <rzslider rz-slider-model="sliderLogo.value"></rzslider>
+  <p class="border"></p>
+  <button class="button" ng-click="vm.savePic()">Save</button>
 </div>
 
 <div class="box device-box">
-  <p class="title is-5">Text Tools:</p>
+  <p class="title is-5 tools">Text Tools:</p>
   <input ng-model="main.text" class="input" placeholder="Main Text"></input>
   <p>Main text size:</p>
     <rzslider rz-slider-model="slider.value"></rzslider>
+    <p class="border"></p>
   <input ng-model="secondary.text" class="input" placeholder="Secondary Text"></input>
   <p>Secondary text size:</p>
   <rzslider class="slider" rz-slider-model="sliderTwo.value"></rzslider>
+  <p class="border"></p>
   <p>Font Color:</p>
   <color-picker ng-model="myColor"></color-picker>
   <button class="button" ng-click="vm.setFontColor()">Apply Color</button>
 </div>
-</div>
+
 
 <div class="box phone-box">
   <div id="imageCont" jqyoui-droppable="{onDrop: 'vm.drop()'}" data-drop="true">
