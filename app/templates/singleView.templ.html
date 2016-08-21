@@ -12,14 +12,14 @@
 <div class="box device-box">
   <p class="title is-5">Text Tools:</p>
   <input ng-model="main.text" class="input" placeholder="Main Text"></input>
+  <p>Main text size:</p>
+    <rzslider rz-slider-model="slider.value"></rzslider>
   <input ng-model="secondary.text" class="input" placeholder="Secondary Text"></input>
-  <span class="title is-6">Font Color:</span>
-  <color-picker ng-model="myColor"></color-picker>
-  <button class="button" ng-click="vm.setFontColor()">Apply</button>
-
-  <span class="title is-6">Font Size</span>
-  <rzslider rz-slider-model="slider.value"></rzslider>
+  <p>Secondary text size:</p>
   <rzslider rz-slider-model="sliderTwo.value"></rzslider>
+  <p>Font Color:</p>
+  <color-picker ng-model="myColor"></color-picker>
+  <button class="button" ng-click="vm.setFontColor()">Apply Color</button>
 </div>
 </div>
 

@@ -1,4 +1,4 @@
-<nav class="nav has-shadow">
+<!-- <nav class="nav has-shadow">
   <div class="container" ng-init="loginCheck()">
     <div class="nav-left">
       <a class="nav-item is-tab is-active" href="/#/">Home</a>
@@ -13,8 +13,33 @@
     </div>
   </div>
 </div>
-</nav>
+</nav> -->
 
+
+<nav class="nav">
+  <div class="nav-left">
+    <img src="./images/logo.png" class="nav-logo" alt="Bulma logo}">
+    </a>
+  </div>
+
+  <div class="nav-center">
+    <a class="nav-item is-tab" href="/#/">Home</a>
+    <a class="nav-item is-tab">My Frames</a>
+    <a class="nav-item is-tab" href="/#/devicelist">Supported Devices</a>
+    <a class="nav-item is-tab">About</a>
+  </div>
+
+  <span class="nav-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+
+  <div class="nav-right nav-menu">
+    <span class="button is-primary log-button" ng-click="vm.toggle()" ng-hide="vm.buttonSwitch">Login</span>
+    <span class="button is-primary log-button" ng-click="vm.logOut()" ng-show="vm.buttonSwitch">Logout</span>
+  </div>
+</nav>
 
 <div ui-view>
 </div>

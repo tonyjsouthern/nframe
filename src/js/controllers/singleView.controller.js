@@ -12,7 +12,7 @@ function SingleView ($scope, $stateParams) {
   vm.savePic              = savePic;
   vm.blurToggle           = blurToggle;
   vm.isActive             = false;
-  vm.logo           = "./images/Blanks/logo.png";
+  vm.logo                 = "./images/Blanks/logo.png";
   vm.background           = "./images/Blanks/blankmain.png";
   vm.screenshot           = "./images/Blanks/blankscreen.png";
   vm.phones               = phones
