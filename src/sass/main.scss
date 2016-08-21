@@ -104,6 +104,7 @@ $purple: #847bb9;
   width: 475px;
   margin: 0 auto;
   overflow: hidden;
+  border: solid lightgrey 1px;
 }
 
 .box li {
@@ -214,6 +215,10 @@ button.buttonGrid {
 
 .rzslider .rz-pointer {
   background-color: $purple;
+}
+
+.slider {
+  margin-bottom: 30px;
 }
 
 

@@ -1,8 +1,5 @@
 var phones = [
   // nexus 5
-
-
-
   {
     "id": "0",
     "name": "Nexus 5",

@@ -29,6 +29,7 @@ function LoginController (UserService, $state, $cookies) {
   function signUp (user) {
     UserService.signup(user).then(resp => {
       user.username = resp.data.username;
+      vm.loginswitch = !vm.loginswitch;
     });
     console.log("Signed Up!")
   }
