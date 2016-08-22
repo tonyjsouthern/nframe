@@ -16,9 +16,12 @@ import { RootController } from './controllers/root.controller.js';
 import { HomeController } from './controllers/home.controller.js';
 import { SingleView } from './controllers/singleView.controller.js';
 import { LoginController } from  './controllers/login.controller.js';
+import { DeviceController } from './controllers/device.controller.js';
+import { FrameController } from './controllers/frame.controller.js';
 
 // import services
 import { UserService } from './services/user.service';
+import { FrameService } from './services/frame.service';
 
 angular
 .module('app', ['ui.router', 'ngCookies', 'ngDragDrop', 'color.picker', 'rzModule'])
@@ -27,6 +30,9 @@ angular
 .constant('SERVER', SERVER)
 .controller('RootController', RootController)
 .controller('HomeController', HomeController)
-.controller('SingleView', SingleView)
 .controller('LoginController', LoginController)
-.service('UserService', UserService);
+.controller('DeviceController', DeviceController)
+.controller('FrameController', FrameController)
+.controller('SingleView', SingleView)
+.service('UserService', UserService)
+.controller('FrameService', FrameService);

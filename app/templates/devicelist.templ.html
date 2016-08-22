@@ -1,10 +1,6 @@
 <div class="box">
   <ul>List of Supported Devices:
-    <li>Nexus 5</li>
-    <li>Nexus 6</li>
-    <li>Nexus 6p</li>
-    <li>Nexus 5x</li>
-    <li>iPhone 6</li>
-    <li>iPhone 6s</li>
-  </ul>
-</div>
+    <li ng-repeat="phone in vm.phones">
+        <a href="/#/singleview/{{ phone.id }}">{{ phone.name }}</a>
+    </li>
+  </div>

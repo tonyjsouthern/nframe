@@ -58,7 +58,7 @@ var phones = [
   // Note 5
   {
     "id": "7",
-    "name": "Note 5",
+    "name": "Galaxy Note 5",
     "model": "Note-5",
     "url": "./images/note5/note5.png",
     "thumbUrl": "./images/note5/note5thumb.png"
