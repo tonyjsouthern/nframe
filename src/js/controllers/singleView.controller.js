@@ -20,10 +20,10 @@ function SingleView ($scope, $stateParams) {
 
 
   $scope.sliderLogo = {
-    value: 200,
+    value: 100,
     options: {
       floor: 0,
-      ceil: 50
+      ceil: 200
     }
   };
 
