@@ -9,15 +9,15 @@
   <p>Logo Size:</p>
   <rzslider rz-slider-model="sliderLogo.value"></rzslider>
   <p class="border"></p>
-  <button class="button" ng-click="vm.savePic()">Save</button>
+  <button class="button" ng-click="vm.savePic()">Create Image</button>
 </div>
 
 <div class="box device-box">
   <p class="title is-5 tools">Text Tools:</p>
   <input ng-model="main.text" class="input" placeholder="Main Text"></input>
   <p>Main text size:</p>
-    <rzslider rz-slider-model="slider.value"></rzslider>
-    <p class="border"></p>
+  <rzslider rz-slider-model="slider.value"></rzslider>
+  <p class="border"></p>
   <input ng-model="secondary.text" class="input" placeholder="Secondary Text"></input>
   <p>Secondary text size:</p>
   <rzslider class="slider" rz-slider-model="sliderTwo.value"></rzslider>
@@ -29,18 +29,32 @@
 
 
 <div class="box phone-box">
-  <div id="imageCont" jqyoui-droppable="{onDrop: 'vm.drop()'}" data-drop="true">
-    <!-- Draggable Text Above Phone -->
-    <p id="phoneTextOne" ng-style="{'font-size': slider.value}"  jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}">{{ main.text }}</p>
-    <p id="phoneTextTwo" ng-style="{'font-size': sliderTwo.value}" jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}">{{ secondary.text }}</p>
-    <!-- Background Images -->
-    <img class="background" jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-class="{'backgroundblur': isActive}" src="{{ vm.background }}">
-    <img class="{{ vm.phone.model }}" ng-src="{{ vm.screenshot }}">
-    <img class="mainimg" src="{{ vm.phone.url }}">
-    <img class="logo" ng-style="{height: sliderLogo.value}" jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}" src = "{{ vm.logo }}">
+  <div class="boxTwo">
+    <div id="imageCont" jqyoui-droppable="{onDrop: 'vm.drop()'}" data-drop="true">
+
+      <p id="phoneTextOne" ng-style="{'font-size': slider.value}"  jqyoui-draggable data-drag="true"
+      data-jqyoui-options="{revert: 'invalid'}">{{ main.text }}</p>
+
+      <p id="phoneTextTwo" ng-style="{'font-size': sliderTwo.value}" jqyoui-draggable data-drag="true"
+      data-jqyoui-options="{revert: 'invalid'}">{{ secondary.text }}</p>
+
+      <img class="background" jqyoui-draggable data-drag="true" data-jqyoui-options="{revert: 'invalid'}"
+      ng-class="{'backgroundblur': isActive}" src="{{ vm.background }}">
+
+      <img class="{{ vm.phone.model }}" ng-src="{{ vm.screenshot }}">
+      <img class="mainimg" src="{{ vm.phone.url }}">
+
+      <img class="logo" ng-style="{height: sliderLogo.value}" jqyoui-draggable data-drag="true"
+      data-jqyoui-options="{revert: 'invalid'}" src = "{{ vm.logo }}">
+    </div>
   </div>
 </div>
 
-<div class="box savedImage">
+<div class="box saved-image">
+  <button class="button" ng-click="vm.addToFrames(vm.image)">Add to My Frames</button>
+  <button class="button" ng-click="vm.saveImage()">Save Image</button>
+  <div class="final-image">
+    <img ng-src={{vm.image}}>
+  </div>
 </div>
 <input class="colorpicker" value="{{ myColor }}">

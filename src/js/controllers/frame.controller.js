@@ -1,7 +1,14 @@
-function FrameController () {
+function FrameController (FrameService) {
 
-console.log('frames yo')
+  let vm = this;
+  vm.retFrames = retFrames;
+
+  function retFrames () {
+    FrameService.getFrames()
+  }
+
+  retFrames();
 
 }
-
+FrameController.$inject=['FrameService']
 export { FrameController }

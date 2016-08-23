@@ -47,6 +47,7 @@
     "angular-ui-router": "^0.3.1",
     "angularjs-color-picker": "^2.4.3",
     "bulma": "^0.1.2",
+    "canvas": "^1.4.0",
     "dom-to-image": "^2.5.1",
     "jquery": "^3.1.0",
     "jquery-ui": "^1.12.0"

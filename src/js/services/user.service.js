@@ -17,7 +17,7 @@ function UserService (SERVER, $http, $cookies) {
 
   function headers() {
     let authToken = $cookies.get('access_token');
-    return { headers: {'access_token': authToken}};
+    return { headers: {'Authorization': 'Bearer ' + authToken}};
   }
 
   function getUser () {

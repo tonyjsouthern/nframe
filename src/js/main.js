@@ -35,4 +35,4 @@ angular
 .controller('FrameController', FrameController)
 .controller('SingleView', SingleView)
 .service('UserService', UserService)
-.controller('FrameService', FrameService);
+.service('FrameService', FrameService);

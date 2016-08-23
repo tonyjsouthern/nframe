@@ -107,7 +107,6 @@ border-radius: 5px;
 #imageCont {
   position: relative;
   width: 475px;
-  margin: 0 auto;
   overflow: hidden;
   border: solid lightgrey 1px;
 }
@@ -120,6 +119,8 @@ border-radius: 5px;
   width: 55%;
   position: relative;
   margin: 25px auto;
+  display: flex;
+  justify-content: center;
 }
 
 .tool-box {
@@ -243,9 +244,9 @@ button.buttonGrid {
 }
 
 
-// .savedImage {
-//   margin: auto;
-// }
+.saved-image {
+}
+
 // CSS for phone screenshots
 
 .Nexus-5 {

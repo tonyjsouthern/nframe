@@ -1,7 +1,7 @@
 import domtoimage from 'dom-to-image';
 import { phones } from '../phones.js'
 
-function SingleView ($scope, $stateParams) {
+function SingleView ($scope, $stateParams, FrameService) {
 
   let vm = this;
   vm.backgroundSelect     = backgroundSelect;
@@ -15,8 +15,12 @@ function SingleView ($scope, $stateParams) {
   vm.logo                 = "./images/Blanks/logo.png";
   vm.background           = "./images/Blanks/blankmain.png";
   vm.screenshot           = "./images/Blanks/blankscreen.png";
-  vm.phones               = phones
+  vm.phones               = phones;
   vm.drop                 = drop;
+  vm.addToFrames          = addToFrames;
+  vm.image ="";
+
+
 
 
   $scope.sliderLogo = {
@@ -74,20 +78,19 @@ function SingleView ($scope, $stateParams) {
         }else{
           $scope.isActive = false;
         }
-
       }
-      // Save Image
-      let selectImage = document.getElementById("imageCont");
 
+      // Save Image
       function savePic (){
-        domtoimage.toPng(selectImage).then ( function (dataUrl){
-          var img = new Image()
-          img.src = dataUrl;
-          $('.savedImage').html(img)
-        })
-        .catch(function (error){
-          console.error('oops, something went wrong!', error);
-        })
+        domtoimage.toBlob(document.getElementById('imageCont'))
+        .then(function (blob) {
+          filepicker.store(
+            blob,
+            function(new_blob){
+              vm.image = new_blob.url;
+              console.log(vm.image);
+            })
+          })
       }
 
       // init function
@@ -103,11 +106,6 @@ function SingleView ($scope, $stateParams) {
       // drop event for draggables and resiazbles
       function drop (event, ui) {
       }
-
-      $( function() {
-        $( "#phoneTextOne" ).resizable();
-      } );
-
 
       // font editing tools
       function setFontColor (){
@@ -125,8 +123,12 @@ function SingleView ($scope, $stateParams) {
         document.getElementById("phoneTextOne").style.fontSize = selectValue;
       }
 
-      setFontSize();
+      function addToFrames (image) {
+        FrameService.addFrame(image)
+          console.log(image)
+      }
+
     } // close
 
-    SingleView.$inject = ['$scope', '$stateParams'];
+    SingleView.$inject = ['$scope', '$stateParams', 'FrameService'];
     export { SingleView };
