@@ -87,10 +87,8 @@ function SingleView ($scope, $stateParams, FrameService, $state) {
               blob,
               function(new_blob){
                 vm.image = new_blob.url;
-                console.log(vm.image);
                 vm.loadingSwitch = false;
                 vm.saveSwitch    = true;
-                console.log(vm.loadingSwitch)
                 $scope.$apply();
               })
             })
@@ -121,7 +119,6 @@ function SingleView ($scope, $stateParams, FrameService, $state) {
 
           function addToFrames (image) {
             FrameService.addFrame(image);
-            console.log(image)
             $state.go('root.frames');
           }
 

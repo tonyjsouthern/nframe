@@ -14,7 +14,6 @@ function LoginController (UserService, $state, $cookies) {
     UserService.login(user).then(
       // Successful Response
       (res) => {
-        console.log(res);
         $cookies.put('access_token', res.data.access_token);
         $cookies.put('username', res.data.username);
         $state.go('root.home');
@@ -31,7 +30,6 @@ function LoginController (UserService, $state, $cookies) {
       user.username = resp.data.username;
       vm.loginswitch = !vm.loginswitch;
     });
-    console.log("Signed Up!")
   }
 
 } // closing bracket

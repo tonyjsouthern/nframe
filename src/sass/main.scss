@@ -3,10 +3,6 @@ $purple: #847bb9;
 @import "color-picker";
 @import "angularjs-slider";
 
-// body {
-//   background-color: #847bb9;
-// }
-
 .container {
   width: 1100px;
 }
@@ -30,20 +26,32 @@ $purple: #847bb9;
   height: 290px;
 }
 
-.is-primary {
-  background-color: #999999;
+.button.is-primary {
+  margin-top: 13px;
 }
 
 html {
   background-color: #2aa198;
 }
 
+.card-frames {
+  width: 200px;
+}
+
+
+
+
 // end of bulm changes
+.frames-image {
+  height: 270px;
+  margin: 10px auto;
+  width:90%;
+}
 
 
 .nav {
-border: solid lightgrey 1px;
-border-radius: 5px;
+  border: solid lightgrey 1px;
+  border-radius: 5px;
 }
 
 .nav-logo {
@@ -163,6 +171,8 @@ border-radius: 5px;
   z-index: 3;
   height: 0px;
   cursor: move;
+  text-shadow: 0px 1px 1px #000;
+  text-shadow: 0px 1px 1px #000;
 }
 
 #phoneTextTwo {
@@ -179,7 +189,7 @@ border-radius: 5px;
 }
 
 .color-picker-wrapper .input-group .color-picker-input-swatch {
-width: 135px;
+  width: 135px;
 }
 
 .colorpicker {
@@ -193,26 +203,26 @@ width: 135px;
 // }
 
 .select-style {
-border: 1px solid #ccc;
-width: 160px;
-border-radius: 3px;
-overflow: hidden;
-background: #ffffff;
-margin: auto;
+  border: 1px solid #ccc;
+  width: 160px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #ffffff;
+  margin: auto;
 }
 
 .select-style select {
-padding: 8px 8px;
-width: 160px;
-border: none;
-box-shadow: none;
-background: #ffffff;
-background-image: none;
--webkit-appearance: none;
+  padding: 8px 8px;
+  width: 160px;
+  border: none;
+  box-shadow: none;
+  background: #ffffff;
+  background-image: none;
+  -webkit-appearance: none;
 }
 
 .select-style select:focus {
-outline: none;
+  outline: none;
 }
 
 .is-6 {
@@ -264,13 +274,8 @@ button.buttonGrid {
   margin: 0 auto;
 }
 
-.box button-single {
+.delete-frame {
   margin-top: 25px;
-}
-
-.frames-image {
-  width: 50%;
-  margin: 0 auto;
 }
 
 .loading-image {
@@ -312,10 +317,10 @@ button.buttonGrid {
 
 .Nexus-5x {
   position: absolute;
-  width: 285px;
-  height: 506px;
-  left: 95px;
-  bottom: 147px;
+  width: 296px;
+  height: 524px;
+  left: 88px;
+  bottom: 140px;
   border-radius: 1px;
   z-index: 1;
 }

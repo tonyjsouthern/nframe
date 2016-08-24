@@ -41,6 +41,10 @@ function config ($stateProvider, $urlRouterProvider) {
     templateUrl: '/templates/single.frame.templ.html',
     controller: 'SingleFrameController as vm'
   })
+  .state('root.about', {
+    url: '/about',
+    templateUrl: '/templates/about.templ.html'
+  })
 
   $urlRouterProvider.otherwise('/');
 

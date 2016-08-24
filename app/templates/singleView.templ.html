@@ -3,7 +3,7 @@
   <p class="title is-5 tools">Image Tools:</p>
   <button class="button" ng-click="vm.backgroundSelect()">Select Background</button>
   <button class="button" ng-click="vm.screenshotSelect()">Select Screenshot</button>
-  <button class="button" ng-click="vm.blurToggle()">Toggle Blur</button>
+  <!-- <button class="button" ng-click="vm.blurToggle()">Toggle Blur</button> -->
   <p class="border"></p>
   <button class="button" ng-click="vm.logoSelect()">Select Logo</button>
   <p>Logo Size:</p>
@@ -56,11 +56,12 @@
 
 <div class="box saved-image" ng-show="vm.saveSwitch">
   <button class="button" ng-click="vm.addToFrames(vm.image)">Add to My Frames</button>
-
   <a target="_self" href="{{ vm.image }}" download="frame">
   <button class="button" ng-click="vm.saveImage()">Save Image</button>
-</a>
+  </a>
   <div class="final-image">
-    <img ng-src="{{vm.image}}">
-  </div>
+  <img ng-src="{{vm.image}}">
+</div>
+</div>
+
   <input class="colorpicker" value="{{ myColor }}">
