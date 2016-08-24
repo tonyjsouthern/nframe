@@ -13,6 +13,7 @@ function SingleView ($scope, $stateParams, FrameService, $state) {
   vm.blurToggle           = blurToggle;
   vm.loadingSwitch        = false;
   vm.isActive             = false;
+  vm.saveSwitch           = false;
   vm.logo                 = "./images/Blanks/logo.png";
   vm.background           = "./images/Blanks/blankmain.png";
   vm.screenshot           = "./images/Blanks/blankscreen.png";
@@ -78,8 +79,6 @@ function SingleView ($scope, $stateParams, FrameService, $state) {
 
         // Save Image
 
-
-
         function savePic () {
           vm.loadingSwitch = true;
           let reg = domtoimage.toBlob(document.getElementById('imageCont'))
@@ -90,6 +89,7 @@ function SingleView ($scope, $stateParams, FrameService, $state) {
                 vm.image = new_blob.url;
                 console.log(vm.image);
                 vm.loadingSwitch = false;
+                vm.saveSwitch    = true;
                 console.log(vm.loadingSwitch)
                 $scope.$apply();
               })

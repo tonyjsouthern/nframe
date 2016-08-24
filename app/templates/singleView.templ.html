@@ -12,8 +12,8 @@
   <button class="button" ng-click="vm.savePic()">Create Image</button>
   <div ng-show="vm.loadingSwitch">
     <p>Creating Image</p>
-  <img class="loading-image" src="./images/loading.gif">
-</div>
+    <img class="loading-image" src="./images/loading.gif">
+  </div>
 
 </div>
 
@@ -54,10 +54,10 @@
   </div>
 </div>
 
-<div class="box saved-image">
+<div class="box saved-image" ng-show="vm.saveSwitch">
   <button class="button" ng-click="vm.addToFrames(vm.image)">Add to My Frames</button>
   <button class="button" ng-click="vm.saveImage()">Save Image</button>
   <div class="final-image">
     <img ng-src="{{vm.image}}">
-</div>
-<input class="colorpicker" value="{{ myColor }}">
+  </div>
+  <input class="colorpicker" value="{{ myColor }}">
