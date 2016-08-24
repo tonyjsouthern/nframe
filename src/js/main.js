@@ -18,6 +18,7 @@ import { SingleView } from './controllers/singleView.controller.js';
 import { LoginController } from  './controllers/login.controller.js';
 import { DeviceController } from './controllers/device.controller.js';
 import { FrameController } from './controllers/frame.controller.js';
+import { SingleFrameController } from './controllers/single.frame.controller.js'
 
 // import services
 import { UserService } from './services/user.service';
@@ -33,6 +34,7 @@ angular
 .controller('LoginController', LoginController)
 .controller('DeviceController', DeviceController)
 .controller('FrameController', FrameController)
+.controller('SingleFrameController', SingleFrameController)
 .controller('SingleView', SingleView)
 .service('UserService', UserService)
 .service('FrameService', FrameService);

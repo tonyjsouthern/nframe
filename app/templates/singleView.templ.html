@@ -10,6 +10,11 @@
   <rzslider rz-slider-model="sliderLogo.value"></rzslider>
   <p class="border"></p>
   <button class="button" ng-click="vm.savePic()">Create Image</button>
+  <div ng-show="vm.loadingSwitch">
+    <p>Creating Image</p>
+  <img class="loading-image" src="./images/loading.gif">
+</div>
+
 </div>
 
 <div class="box device-box">
@@ -26,7 +31,6 @@
   <color-picker ng-model="myColor"></color-picker>
   <button class="button" ng-click="vm.setFontColor()">Apply Color</button>
 </div>
-
 
 <div class="box phone-box">
   <div class="boxTwo">
@@ -54,7 +58,6 @@
   <button class="button" ng-click="vm.addToFrames(vm.image)">Add to My Frames</button>
   <button class="button" ng-click="vm.saveImage()">Save Image</button>
   <div class="final-image">
-    <img ng-src={{vm.image}}>
-  </div>
+    <img ng-src="{{vm.image}}">
 </div>
 <input class="colorpicker" value="{{ myColor }}">

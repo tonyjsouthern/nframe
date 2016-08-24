@@ -33,6 +33,7 @@ function UserService (SERVER, $http, $cookies) {
   function isLoggedIn () {
     return !!this.getUser() ? true : false;
   }
+
 } // closing bracket for class
 
 UserService.$inject = ['SERVER', '$http', '$cookies'];

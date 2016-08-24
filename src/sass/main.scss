@@ -3,6 +3,10 @@ $purple: #847bb9;
 @import "color-picker";
 @import "angularjs-slider";
 
+body {
+  background-color: #847bb9;
+}
+
 .container {
   width: 1100px;
 }
@@ -20,6 +24,21 @@ $purple: #847bb9;
   margin-top:11px;
   margin-right:10px;
 }
+
+// bulma changes
+.card {
+  border: solid #999999 1px;
+}
+
+.is-primary {
+  background-color: #999999;
+}
+body {
+  background-color: #847bb9;
+}
+
+// end of bulm changes
+
 
 .nav {
 border: solid lightgrey 1px;
@@ -62,17 +81,6 @@ border-radius: 5px;
   margin: 0px 5px 25px 5px;
 }
 
-.glare {
-  width: 800px;
-  height: 473px;
-  width: 0;
-  width: 0;
-  height: 0;
-  // border-style: solid;
-  // border-width: 0 0 800px 473px;
-  // border-color: transparent transparent #ffffff transparent;
-}
-
 .login-form input {
   text-align: center;
   width: 50%;
@@ -104,11 +112,10 @@ border-radius: 5px;
 
 }
 
-#imageCont {
+#imageCont{
   position: relative;
   width: 475px;
   overflow: hidden;
-  border: solid lightgrey 1px;
 }
 
 .box li {
@@ -243,10 +250,36 @@ button.buttonGrid {
   margin-bottom: 20px;
 }
 
-
-.saved-image {
+.media-content button {
+  margin-left: 50px;
 }
 
+.content-frame {
+  height: 75px;
+}
+
+.single-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.box button-single {
+  margin-top: 25px;
+}
+
+.frames-image {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.loading-image {
+  height: 100px;
+  margin: 10px auto;
+}
+
+.loader-back {
+  background-color: grey;
+}
 // CSS for phone screenshots
 
 .Nexus-5 {
