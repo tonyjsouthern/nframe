@@ -1,7 +1,7 @@
 import domtoimage from 'dom-to-image';
 import { phones } from '../phones.js'
 
-function SingleView ($scope, $stateParams, FrameService) {
+function SingleView ($scope, $stateParams, FrameService, $state) {
 
   let vm = this;
   vm.backgroundSelect     = backgroundSelect;
@@ -120,11 +120,12 @@ function SingleView ($scope, $stateParams, FrameService) {
           }
 
           function addToFrames (image) {
-            FrameService.addFrame(image)
+            FrameService.addFrame(image);
             console.log(image)
+            $state.go('root.frames');
           }
 
         } // close
 
-        SingleView.$inject = ['$scope', '$stateParams', 'FrameService'];
+        SingleView.$inject = ['$scope', '$stateParams', 'FrameService', '$state'];
         export { SingleView };
