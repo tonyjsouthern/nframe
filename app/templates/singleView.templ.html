@@ -56,7 +56,10 @@
 
 <div class="box saved-image" ng-show="vm.saveSwitch">
   <button class="button" ng-click="vm.addToFrames(vm.image)">Add to My Frames</button>
+
+  <a target="_self" href="{{ vm.image }}" download="frame">
   <button class="button" ng-click="vm.saveImage()">Save Image</button>
+</a>
   <div class="final-image">
     <img ng-src="{{vm.image}}">
   </div>
