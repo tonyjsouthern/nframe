@@ -3,9 +3,9 @@ $purple: #847bb9;
 @import "color-picker";
 @import "angularjs-slider";
 
-body {
-  background-color: #847bb9;
-}
+// body {
+//   background-color: #847bb9;
+// }
 
 .container {
   width: 1100px;
@@ -27,7 +27,7 @@ body {
 
 // bulma changes
 .card {
-  border: solid #999999 1px;
+  height: 290px;
 }
 
 .is-primary {
@@ -35,7 +35,7 @@ body {
 }
 
 html {
-  background-color: #847bb9;
+  background-color: #2aa198;
 }
 
 // end of bulm changes
